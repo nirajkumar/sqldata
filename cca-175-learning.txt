@@ -1,0 +1,245 @@
+Everyday at home try few things on the Sandbox Machine:
+
+1. Check resource manager, node manager running:
+	ps -ef | grep manager
+	ps -ef | grep node
+	
+2. ps -fu hdfs
+	to see services running under hdfs user.
+3. ps -fu yan
+	for resource manager and node manager.
+	
+4. Refer playlist hadoop map reduce development.
+
+Sqoop:
+https://sqoop.apache.org/docs/1.4.6/SqoopUserGuide.html#_literal_sqoop_import_literal
+
+
+5. sqoop help.
+
+Try sqoop help with different commands and check the arguments appearing as per the sqoop documentations.
+
+6. Sqoop commands:
+sqoop list-databases \
+  --connect "jdbc:mysql://quickstart.cloudera:3306" \
+  --username retail_dba \
+  --password cloudera
+ 
+ sqoop list-tables \ 
+  --connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
+  --username retail_dba \
+  --password cloudera
+  
+  7. Eval in sqoop:
+	
+	We can use eval to execute differet statements on database.
+	
+	sqoop eval \
+  --connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
+  --username retail_dba \
+  --password cloudera \
+  --query "select count(1) from order_items"
+  
+  8. Sqooop import:
+  https://sqoop.apache.org/docs/1.4.6/SqoopUserGuide.html#_literal_sqoop_import_literal
+  
+  sqoop import --help
+	This will show the common argument, control arguments etc.
+	
+  Squoop supports 3 different file format for import.
+  
+  hostname -f
+  ==
+  Video 10.
+  ==
+  9. Boundry conditions in sqoop:
+		Refer itversity plylist for "building enterprise level dataware house using sqoop".
+		
+
+		sqoop import-all-tables \
+  -m 12 \
+  --connect "jdbc:mysql://quickstart.cloudera:3306/retail_db" \
+  --username=retail_dba \
+  --password=cloudera \
+  --as-avrodatafile \
+  --warehouse-dir=/user/hive/warehouse/retail_stage.db
+  
+  10. warehouse-dir option does not work with import but worked with import-all tables.
+  
+    --boundary-query <statement> 	Boundary query to use for creating splits 
+	used for excludig outliers 
+		for split if ML of rows, then provide the boundry query. to overcome the boundry.
+		
+		
+   11. --query and --table are mutually exclusive parameters.
+   12. --split-by can be used if there is no primery key.
+		This is required to be provided 
+   
+		
+Video 11:
+		importing into hive tables using squoop.
+		deleting the dir from hdfs and importing with same name.
+		
+Video 12:
+		Incremental import
+			either use OOTB sqoop fascility or can be done by where condition or query also.
+			So after doing import store value of some column in a log table which want to use for incremental import.
+			Secondly provide append in the command.
+			few OOTB params are:
+				--check-column (col) 	Specifies the column to be examined when determining which rows to import.
+				--incremental (mode) 	Specifies how Sqoop determines which rows are new. Legal values for mode include append and lastmodified.
+				--last-value (value) 	Specifies the maximum value of the check column from the previous import. 
+
+
+
+Video 13:
+		export from HDFS to mysql.
+			mainly insersts, ading new records to new tables etc.
+			
+Video 14:
+		sqoop export, from hdfs to mysql, but with updating the records.
+		
+Video15: import with mysql and hive
+		1. Testing the enclosed by. used \"
+		2. --fields-terminated-by , modified the field sparated by.
+		3, Delimitors in hive.
+		4. create table in hive and check delimitors.
+		5. Handling different delimitors when importing in hive using sqoop. Handing the issues since delimitors needs to be same for hive to read table data.
+		6. Manipulating null and not null strings while import .
+		7 Get familiar with few mysql command so that can use them delete etc.
+		8. To solve delimitors issues used --hive-import in the command.
+		9. Hanlding --null-string and --null-non-string.
+		
+Video16: 	Input parsing arguments while export.
+		1. Chabge the default hive delimetor to export into mysql.
+		2. export from hive to my sql, check using eval command and identify delimitor '\001'
+Video17:  File formts of data while sqoop import.
+			need not be mentioned while exporting since sqoop understand.
+			avro and json are similar.
+			seq is binary
+			text is default.
+			--as-avrodatafile, --as-sequencefile, --as-parquetfile : columner format of data storage.
+		  store imported data into hive using the avro file format.
+		need to create at hive exyernal tables.
+
+Video18: Sqoop job predefined configurati
+			creating sqoop jobs and saving them.
+			Merge: 
+			
+		
+		
+================
+
+Switching to Hive:
+
+5/16 : Monday.
+
+Video 68: Familiar with hive DDL queries.
+	       Main emphasis on DDL and loding data in table.
+		  Spark emphasis was on transformation.
+		  Gateway node, hive installed there, it has all hadoop componets jar.
+		  We set up hive metastore db and tell where hadoop cluster there.
+		  Hive Metastore stores schema in a DB.
+		  As part of configration : hive-site.xml : details about metastore and hdfs is.
+		  From the query, hive build the M/R jobs in a jar file using information from Metastore DB.
+		  That Jar is submitted a M/R job to haddop cluster.
+		  The other way is to use spark context. So, it will use spark binaries and create spark job 
+		  and spark job will do the computation.
+		  A)
+		  cd /etc/hive/conf  hive-site.xml
+		  cd /etc/hadoop/conf core-site.xml
+		  
+		  /user/hive/warehouse : default hdfs hive me
+		  First check for the hive-site and then the warehouse directory.
+		  
+		  B) Check cludera manager and check hive configuration for metastore etc.
+			metastore a db in mysql.
+			check tables there and the data.
+			
+		  C) create a hive table and check what happens internally.
+			check tbls in mysql and actula data file on hdfs.
+					columns_v2
+		  describe formatted cca_demo;
+		  
+		  D) Run some hive queries in spark hive context at comamnd line.
+		  E) run impall-shell
+		  Create tables from impala and spark.
+		  
+Video 70:
+		A) create table deck of cards.
+		B) understand the Physical data partitioning.
+			a) file format, data types, delimiter, format for null values.
+			b) Redundency, partitionning, bucketing,
+		  
+		  Since there are no inedexes, need to partition same fact data
+			one data set partition on date and other duplicate partitioned on city.
+			so that we can generate report in both dimension effectively.
+			So need to check for redudency.
+	
+			too much partition or too less e.g : Daily partition or Yearly partition
+			Need a good partition strategy.
+			
+	DataWare house concepts:
+		Facts, DImensions , Star Schemas, Snowflake schemas, Rollup Tables, Report Tables.
+			use all these for Physical modelling.
+			
+		
+Video 71: Covering hive ddl Demo : create ODS with partitions to join for tail_db
+			1.conventiona data types are different from hive.
+			2. Hive uses simple lazy serialization ande desier class
+			We need to get the performance at department levels, so need to join dept with categories with products
+				which with order_items.
+			4 tables and can not join in RDB since huge data. So need an EDW and also use ODS.
+			orders and order items are transactional.
+			
+			So need to create 6 above table in ODS.
+			So from mysql to Hive, there is translation of data type.
+			
+			All dates are represented as string.
+			Partition big data like orders, so using the order_month as partition criteria.
+			Also partition order_items on the same key as order which is order_months.
+			
+			This is to avoid full table join, so add extra column as order_item_order_month in order_items.
+			
+			Redundency as an imp design criteria as above.
+			
+			Using buckets to partition on order_ids, more fine grained.
+
+Video 72: Extract and Load using sqoop:
+			a) Issues while pulling from production OLTP DB.
+			b) Push strategy : using hive to load when source application has pushed the data.
+			c) Many sqoop commands
+Video 73:  Extract and Load : Hive Theory
+
+			Using load commadn from hive to load from the local file system into hive.
+			
+Video 74 : Load data in hive using sqoop:
+
+			Writing main command then to try out.
+			A) using sqoop commadn with delimite and impot in HDFS for hive.
+				using incremental load.
+Video 75:	Load into hive using HIve:
+
+Video 76: 	Hive Insert: Theory
+				A) insert overwrite : old files will be replaced.
+				B) insert into : old files will not be deleted , simulates append.
+				C) Table insert
+				D) inserting into a bucketed table.
+Video 77:    Hive insert Demo: Commands
+				3 databases.
+				ODS is the first level to launch data.
+				In ODS table is partitioned and little denormalized, so while loading from mysql, we need to 
+				do some transformations before loading from mysql to hive.
+				So, first load from mysql to stage. Then from stage to ods.
+				
+				Refer the command from: 04hive_insert to load data into the tables.
+		
+				
+				
+				
+
+			
+			
+		
+		
+		

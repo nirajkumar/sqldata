@@ -1,0 +1,105 @@
+CCA steps:
+	1. listen all 86 videos. ( 15: Sat, 15 Sun, 15 Mon. 15 Tues)  : Note down the steps.
+		a) Note in learning.txt all the learning.
+		b) refer the documentation and become familiar with documentation.
+		c) Read all the command stored in git hub text files.
+
+	2. Get the problems list from hadoopexams.com and solve all the problems one by one.
+
+	3. Hadoop from itversity
+	4. enterprise data ware house from itversity
+	5. Spark streaming from itversity.
+	6. Production issues for Spark, Hive, Java, Hbase, Accumulo, Impala , Scala etc.
+	
+	
+
+	https://www.dezyre.com/article/hadoop-components-and-architecture-big-data-and-hadoop-training/114
+	Ecosystem table: https://hadoopecosystemtable.github.io/
+	
+	
+===	
+
+===
+
+1. HDP-CD
+2. HDP-CJ
+3. HDP-Spark
+
+4. Java
+	: collecton, concurrency, performance.
+5. JVM
+		tuning, GC, performance 
+6. Tools:
+		profiling, newRlic etc
+
+7. Performance issues:
+	a) Big scalable
+	b) Java perf issues.
+	c) Hadoop cluster.
+
+8. Anand Questions.
+9. Spring, Mongo, ELK, 
+10. Small algorithm coding practice in Java:
+	a) Search Sort.
+	b) String Manipulation.
+
+
+
+====
+
+
+HDP-CD
+
+
+1. Read the Vijay's tasks and perform in practice eam env.
+
+2. Read the reading list from the exam page reading suggested links.
+
+3. Perform multiple tasks in the practice exam environment.
+
+==
+
+Mini Tools List and their interaction with each other:
+
+Create a small ec2 isntance or HDP exam sand box and try out.
+Install MR,PIg< HIVE on same HDP exam sand box and try it out.
+Use same env to get speed and familiarity.
+
+1. Hive  : file format, I/O formats and challengs, partions, depus, ranking  etc.
+2. Pig
+3. HBase
+4. Impala
+5. Sqoop
+6. Flume
+7. Storm.
+8. Accumulo.
+9. Cassandra.
+10. APache Mahout.
+11. M/R jobs in production.
+12. Stories around performance, Challenges and integrations of these tools in production env.
+13. Thrift and storis of thrift uses.
+14. Spark : RDD, SQL, Streaming, ML lib.
+15. Scala
+16. File format ORC, AVRO, Paraquet etc.
+
+
+e.g: Handling DDUp and record updates in Hive.
+
+
+Reservation Cancelled Successfully
+Your cancellation confirmation code: 66C-EDA
+====
+
+CCA-175:
+
+1. Sqoop, Flume
+2. Spark
+3. Hive, Hive.
+
+
+
+
+May 2:
+
+1. Complete Hive Tutorials from : http://hadooptutorial.info/hive-overview/
+

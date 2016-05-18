@@ -1,0 +1,31 @@
+Hadoop compoenets: https://www.dezyre.com/article/hadoop-components-and-architecture-big-data-and-hadoop-training/114
+Ecosystem Table: https://hadoopecosystemtable.github.io/
+
+
+
+1. Core Hadoop Components
+	a)  Hadoop Common-
+	b) Hadoop Distributed File System (HDFS) 
+	c)MapReduce- Distributed Data Processing Framework of Apache Hadoop
+	c)YARN 
+2.	Data Access Components of Hadoop Ecosystem
+	a)PIG
+	b)Hive : data warehouse built on top of Hadoop an
+		Hive simplifies Hadoop at Facebook with the execution of 7500+ Hive jobs daily for Ad-hoc analysis, reporting and machine learning.
+3.	Data Integration Components of Hadoop Ecosystem- Sqoop and Flume
+	a)Sqoop
+	b)Flume
+4.	Data Storage Component of Hadoop Ecosystem
+
+	a) HBase : HBase is a column-oriented database that uses HDFS for underlying storage of data. HBase supports random reads and also batch computations using MapReduce. 
+		With HBase NoSQL database enterprise can create large tables with millions of rows and columns on hardware machine. 
+		The best practice to use HBase is when there is a requirement for random ‘read or write’ access to big datasets.
+		Facebook is one the largest users of HBase with its messaging platform built on top of HBase in 2010.
+		HBase is also used by Facebook for streaming data analysis, internal monitoring system, Nearby Friends Feature, Search Indexing and scraping data for their internal data warehouses.
+			
+	b) Accumulo
+	c)Cassandra
+5.	Monitoring, Management and Orchestration Components of Hadoop Ecosystem
+	a)Oozie : Oozie is a workflow scheduler where the workflows are expressed as Directed Acyclic Graphs. 
+	b)Zookeeper : Found by Elastic uses Zookeeper comprehensively for resource allocation, leader election, high priority notifications and discovery.
+	
