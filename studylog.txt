@@ -1,0 +1,122 @@
+Java fundamentals, 7, 8 : Hadoop M/R : Hive : Impala : Pig : Spark : Spring basics : Web API : DS + ALgo
+
+Note Down the learning. Create a study and learning log file.
+
+Keep two headers.
+
+
+
+6/1/2016
+
+========
+0. 5 Tips for fast hive queries : https://www.qubole.com/blog/big-data/5-tips-for-efficient-hive-queries/?nabe=5695374637924352:1&utm_referrer=https://www.google.co.in
+
+1.	http://hadooptutorial.info/sqoop-hive-use-case-example/
+		1. Squoop with hive for relative fre of criminal category data and crime fre as a function of day of week.
+		2. Hive urls freq
+		3. Log processing.
+
+2.	http://randyzwitch.com/hive-five-hard-won-lessons/
+		https://cwiki.apache.org/confluence/display/Hive/LanguageManual+Select#LanguageManualSelect-PartitionBasedQueries
+
+3.	http://www.computerweekly.com/tutorial/Star-schema-in-database-Guide-to-construction-and-composition
+		http://searchdatamanagement.techtarget.com/definition/dimension-table
+		Like fact tables, dimension tables are often highly de-normalized,
+		a system-generated key is used to uniquely identify a row in the dimension
+		The primary key in the fact table is made up of foreign keys that have migrated from the dimension tables.
+		A major benefit of the star schema in the database is that the low-level transactions may be summarized to the fact table grain
+
+
+
+4. 	https://dzone.com/articles/getting-started-apache-avro
+5. 	http://www.slideshare.net/StampedeCon/choosing-an-hdfs-data-storage-format-avro-vs-parquet-and-more-stampedecon-2015
+
+==========
+
+
+6/2/2016:
+
+1.	Twitter data feed analystis steps: https://www.quora.com/What-should-I-do-to-analyse-a-dataset-of-Twitter-tweets
+	Steps: 	a) define objective: define the distribution of topics, overall sentiments of tweets and how do they change with time,
+		   most talked entities trending
+		b) Steps	1. Cleaning data and extracting features: extract tweet text, hashtag, tweet dates, uswrname etc.
+					 Extracting named entities from the tweets and storing them, POS(Part-of-Speech) tagging of tweets, stemming etc
+				2. Analyze based on features selected in prev step : e.g Map fequency of nouns.
+				3. Visualizations:  line graph or tag cloud etc.	
+
+
+Try this out:				
+			
+2.   Hands on with Flume, Hive Ozzie:
+	http://blog.cloudera.com/blog/2012/09/analyzing-twitter-data-with-hadoop/
+	https://github.com/nirajkumar/cdh-twitter-example
+
+
+
+Try this out:
+3.  Using Parquet with impala, hive, pig etc.
+
+	http://blog.cloudera.com/blog/2014/03/how-to-use-parquet-with-impala-hive-pig-mapreduce/
+	http://blog.cloudera.com/blog/2014/02/native-parquet-support-comes-to-apache-hive/
+
+Try out this:
+4. Learn Impall with airline data and optimize query with Impala
+	http://blog.cloudera.com/blog/2015/09/how-to-prepare-unstructured-data-in-impala-for-analysis/
+	http://blog.cloudera.com/blog/2015/05/how-to-read-fix-messages-using-apache-hive-and-impala/
+	
+
+Try out this:
+4. Processing PDF using OCR, Spark, and other hadoop tools:
+	http://blog.cloudera.com/blog/2015/10/how-to-index-scanned-pdfs-at-scale-using-fewer-than-50-lines-of-code/
+	Using this in resume for patient data.
+
+5. Using OOzie:
+	http://blog.cloudera.com/blog/2014/04/how-to-use-cron-like-scheduling-in-apache-oozie/
+	http://blog.cloudera.com/blog/2013/11/how-to-shorten-your-oozie-workflow-definitions/
+
+
+	
+5. Read This:
+	http://blog.cloudera.com/blog/2014/08/improving-query-performance-using-partitioning-in-apache-hive/
+	http://blog.cloudera.com/blog/2014/01/impala-performance-dbms-class-speed/
+	http://blog.cloudera.com/blog/2016/02/how-to-build-a-real-time-search-system-using-streamsets-apache-kafka-and-cloudera-search/
+
+Read this
+
+6. Transalate from Apache M/R to Apache Spark:
+	http://blog.cloudera.com/blog/2014/09/how-to-translate-from-mapreduce-to-apache-spark/
+	http://blog.cloudera.com/blog/2015/04/how-to-translate-from-mapreduce-to-apache-spark-part-2/
+
+7. Ipython Notebook with Apache Spark:
+	http://blog.cloudera.com/blog/2014/08/how-to-use-ipython-notebook-with-apache-spark/
+
+8 Time dependent multilayer network in Apache hadoop:
+	http://blog.cloudera.com/blog/2014/05/how-to-manage-time-dependent-multilayer-networks-in-apache-hadoop/
+	http://blog.cloudera.com/blog/2014/07/how-to-build-advanced-time-series-pipelines-in-apache-crunch/
+
+
+
+
+4. 	Big data bought pdf
+
+===
+5. 	Sunil's pdf.
+
+==
+6. 	The M/R pattern book.
+==
+
+
+
+Todo List:
+
+1. call HDFC MF for folio.
+2. pay ICICI CC.
+3. Check about funds India.
+4. Monthly budget Calc etc.
+5. Ishanee's Fees.: System Transaction No is 300510206160938
+
+
+
+
+
